@@ -3,13 +3,14 @@
         div.moverizquierda
           b-breadcrumb-item.achicar.quitarpunto(to="/preguntas-frecuentes/")
             img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
-          router-link(to="/preguntas-frecuentes/")
+          <router-link to="/preguntas-frecuentes/">
             span.omnes-medium.linkprincipal Principal
+          </router-link>   
           span.omnes-medium(style="padding-right:6px;") ›
-          span.omnes-semibold.tamanonuevolink(style="color: #0754C4;") {{nombreTab}}
+          span.omnes-semibold.tamanonuevolink(style="color: #0754C4;") {{nombrepagina}}
 
         div.pd-top-bot.reducirpadding
-                h5.omnes-medium.titulo.ocultar-div(style="padding-bottom:15px") {{nombreTab}}
+                h5.omnes-medium.titulo.ocultar-div(style="padding-bottom:15px") {{nombrepagina}}
                 div.centrar
                     div.ocultarmayor576px.centrar.rectangulo(style="margin-bottom:20px; margin-top:0px")
                         <b-dropdown class="m-2" menu-class="w-100" style="width:100%;" variant="white" toggle-class="text-decoration-none" no-caret>
@@ -17,15 +18,15 @@
                                 div.izquierdadesplegable   
                                     span
                                         img.tamanoiconodropdown(src="@/static/media/icons/Group11Copy.svg" style="width:2rem;")
-                                        span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombreTab}}
+                                        span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombrepagina}}
                                     span
                                         img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
                             </template> 
-                                b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu") {{item.title}}
+                                b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>  
 
                 div.linea
-                div(v-for="(item, index) in preguntas")             
+                div(v-for="(item, index) in preguntas" :key="index")             
                     div.centrarpregunta.change(v-b-toggle="item.identificador" style="height:64px;") 
                         div.lista2.omnes-semibold.when-opened.acomodarlista {{item.id}} - {{item.title}} 
                         div.lista.omnes-medium.when-closed.acomodarlista {{item.id}} - {{item.title}} 
@@ -45,10 +46,10 @@ export default {
     preguntas: {
       type: Array,
     },
-    nombreTab: String,
     itemsMenu: {
       type: Array,
     },
+    nombrepagina: String,
   },
   data() {
     return {

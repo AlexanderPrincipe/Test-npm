@@ -9,7 +9,7 @@
           <b-col class="lineas100" sm="12" md="8">
             <preguntasFrecuentesGenerico
             :preguntas=preguntas
-            :nombretab=nombreTab
+            :nombrepagina=nombrepagina
             :itemsMenu=itemsMenu
             />
           </b-col>
@@ -34,7 +34,7 @@ export default {
   },
   data () {
     return {
-      nombreTab: 'Genérico',
+      nombrepagina:'Genérico',
       preguntas:[
           {
               id: '1',

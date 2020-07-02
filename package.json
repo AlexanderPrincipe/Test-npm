@@ -1,6 +1,6 @@
 {
-  "name": "preguntas-frecuentes-ap",
-  "version": "0.1.0",
+  "name": "preguntas-frecuentes-alexander",
+  "version": "0.1.3",
   "description": "preguntas frecuentes is",
   "main": "src/main.js",
   "private": false,
@@ -16,7 +16,8 @@
     "lodash": "^4.17.15",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.7.0",
