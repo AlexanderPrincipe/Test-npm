@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <section class="mg-top-bot pregunta-frecuente reducirespaciadosection">
       <b-container>
         <b-row class="centrar">
@@ -9,7 +9,7 @@
           <b-col class="lineas100" sm="12" md="8">
             <preguntasFrecuentesGenerico
             :preguntas=preguntas
-            :nombrepagina=nombrepagina
+            :nombrepagina=TextoTab
             :itemsMenu=itemsMenu
             />
           </b-col>
@@ -26,7 +26,6 @@
 <script>
 import preguntasFrecuentesGenerico from './components/preguntasFrecuentesGenerico.vue'
 
-
 export default {
   name: 'App',
   components: {
@@ -34,7 +33,7 @@ export default {
   },
   data () {
     return {
-      nombrepagina:'Genérico',
+      TextoTab: 'Tab Generico',
       preguntas:[
           {
               id: '1',
@@ -103,56 +102,6 @@ export default {
           to: '/preguntas-frecuentes/sobre-covid-19'
         }
       ],
-      links: [
-            {
-                id: '1',
-                title: 'Preguntas más frecuentes',
-                imagen: '@/static/media/icons/GroupDudas.svg',
-                to: '/preguntas-frecuentes/'
-            },
-            {
-                id: '2',
-                title: 'Planes de Viaje Seguro',
-                imagen: '@/static/media/icons/Group19Copy.svg',
-                to: '/preguntas-frecuentes/planes-viaje-seguro'
-            },
-            {
-                id: '3',
-                title: 'Cómo comprar Viaje Seguro',
-                imagen: '@/static/media/icons/Group18Copy.svg',
-                to: '/preguntas-frecuentes/como-comprar-viaje-seguro'
-            }, 
-            {
-                id: '4',
-                title: 'Cobertura de Viaje Seguro',
-                imagen: '@/static/media/icons/Group15Copy.svg',
-                to: '/preguntas-frecuentes/cobertura-viaje-seguro'
-            },
-            {
-                id: '5',
-                title: 'Modificación de Viaje Seguro',
-                imagen: '@/static/media/icons/Group11Copy.svg',
-                to: '/preguntas-frecuentes/modificacion-viaje-seguro'
-            },
-            {
-                id: '6',
-                title: 'Utilización del seguro',
-                imagen: '@/static/media/icons/Group2Copy.svg',
-                to: '/preguntas-frecuentes/utilizacion-viaje-seguro'
-            },
-            {
-                id: '7',
-                title: 'Trámites',
-                imagen: '@/static/media/icons/Group9Copy2.svg',
-                to: '/preguntas-frecuentes/tramites'
-            },
-            {
-                id: '8',
-                title: 'Sobre COVID-19',
-                imagen: '@/static/media/icons/logocoronavirus.svg',
-                to: '/preguntas-frecuentes/sobre-covid-19'
-            },
-        ], 
     }
   }
 }

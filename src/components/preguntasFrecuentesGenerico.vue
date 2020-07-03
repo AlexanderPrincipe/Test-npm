@@ -2,7 +2,7 @@
     div
         div.moverizquierda
           b-breadcrumb-item.achicar.quitarpunto(to="/preguntas-frecuentes/")
-            img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
+            img.d-inline.w-1(src="")
           <router-link to="/preguntas-frecuentes/">
             span.omnes-medium.linkprincipal Principal
           </router-link>   
@@ -17,10 +17,10 @@
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
                                     span
-                                        img.tamanoiconodropdown(src="@/static/media/icons/Group11Copy.svg" style="width:2rem;")
+                                        img.tamanoiconodropdown(src="" style="width:2rem;")
                                         span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombrepagina}}
                                     span
-                                        img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
+                                        img.tamanoflechadropdown(src="")
                             </template> 
                                 b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>  
@@ -30,8 +30,8 @@
                     div.centrarpregunta.change(v-b-toggle="item.identificador" style="height:64px;") 
                         div.lista2.omnes-semibold.when-opened.acomodarlista {{item.id}} - {{item.title}} 
                         div.lista.omnes-medium.when-closed.acomodarlista {{item.id}} - {{item.title}} 
-                        img.when-opened.flecha.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
-                        img.when-closed.flecha.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
+                        img.when-opened.flecha.tamanoflecha2(src="")
+                        img.when-closed.flecha.tamanoflecha2(src="")
                     b-collapse.mt-2(:id="item.identificador")
                         p.parrafo.omnes-medium {{item.respuesta}}
                         p.parrafo.omnes-medium {{item.respuesta}}
