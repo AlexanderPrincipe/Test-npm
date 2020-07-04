@@ -125,6 +125,9 @@ data() {
 src/static/media/icons
 ```
 
+![Captura de pantalla de 2020-07-03 20-23-41](https://user-images.githubusercontent.com/31213239/86502671-4f6e4b00-bd6b-11ea-9dac-7d7854d0c046.png)
+
+
 ---
 ⌨️ con ❤️ por [AlexanderPrincipe](https://github.com/AlexanderPrincipe) 😊
 
