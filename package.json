@@ -1,6 +1,6 @@
 {
   "name": "preguntas-frecuentes-alexander",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "preguntas frecuentes is",
   "main": "src/main.js",
   "private": false,
@@ -34,5 +34,16 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-bootstrap-vue": "~0.6.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderPrincipe/Test-npm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderPrincipe/Test-npm/issues"
+  },
+  "homepage": "https://github.com/AlexanderPrincipe/Test-npm#readme"
 }
