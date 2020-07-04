@@ -36,7 +36,7 @@ export default {
 }
 ```
 
-### 2do Paso: Ingresar los datos requeridos📋
+### 2do Paso: Ingresar los datos requeridos :octocat: 
 ```
 <preguntasFrecuentesGenerico
  :preguntas=preguntas
