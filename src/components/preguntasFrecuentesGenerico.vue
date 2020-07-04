@@ -2,7 +2,7 @@
     div
         div.moverizquierda
           b-breadcrumb-item.achicar.quitarpunto(to="/preguntas-frecuentes/")
-            img.d-inline.w-1(src="")
+            img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
           <router-link to="/preguntas-frecuentes/">
             span.omnes-medium.linkprincipal Principal
           </router-link>   
@@ -17,21 +17,21 @@
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
                                     span
-                                        img.tamanoiconodropdown(src="" style="width:2rem;")
+                                        img.tamanoiconodropdown(src="@/static/media/icons/Group11Copy.svg" style="width:2rem;")
                                         span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombrepagina}}
                                     span
-                                        img.tamanoflechadropdown(src="")
+                                        img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
                             </template> 
                                 b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
-                        </b-dropdown>  
+                        </b-dropdown>
 
                 div.linea
                 div(v-for="(item, index) in preguntas" :key="index")             
                     div.centrarpregunta.change(v-b-toggle="item.identificador" style="height:64px;") 
-                        div.lista2.omnes-semibold.when-opened.acomodarlista {{item.id}} - {{item.title}} 
-                        div.lista.omnes-medium.when-closed.acomodarlista {{item.id}} - {{item.title}} 
-                        img.when-opened.flecha.tamanoflecha2(src="")
-                        img.when-closed.flecha.tamanoflecha2(src="")
+                        div.lista2.omnes-semibold.when-opened.acomodarlista {{item.title}} 
+                        div.lista.omnes-medium.when-closed.acomodarlista {{item.title}} 
+                        img.when-opened.flecha.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
+                        img.when-closed.flecha.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
                     b-collapse.mt-2(:id="item.identificador")
                         p.parrafo.omnes-medium {{item.respuesta}}
                         p.parrafo.omnes-medium {{item.respuesta}}
@@ -69,14 +69,18 @@ export default {
 
 <style scoped>
 
-.collapsed > .when-opened,
+    .collapsed > .when-opened,
     :not(.collapsed) > .when-closed {
         display: none;
     }
 
+    .pd-top-bot {
+      padding: 14px 0;
+    }
+
     .linkprincipal {
       padding-left:3px;
-      padding-right:8px;
+      padding-right:6px;
       padding-bottom:7px;
       padding-top:7px; 
       font-size: 14px;
@@ -223,7 +227,7 @@ export default {
 
   .moverizquierda {
     position: relative;
-    right: 15px;
+    right: 0px;
     padding-bottom: 4px;
   }
 
@@ -408,7 +412,7 @@ export default {
 
     .moverizquierda {
       position: relative;
-      right: 5px;
+      right: -10px;
       padding-bottom: 4px;
     }
 
@@ -439,7 +443,7 @@ export default {
 
     .linkprincipal {
       padding-left:5px;
-      padding-right:8px;
+      padding-right:6px;
       padding-bottom:7px;
       padding-top:7px; 
       font-size: 14px;

@@ -33,29 +33,29 @@ export default {
   },
   data () {
     return {
-      TextoTab: 'Tab Generico',
+      TextoTab: 'Utilización del seguro',
       preguntas:[
           {
               id: '1',
-              title: 'Pregunta 1',
+              title: '¿Qué hacer en caso de Emergencias?',
               identificador: 'collapse-1',
               respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta1'
           },
           {
               id: '2',
-              title: 'Pregunta 2',
+              title: '¿Qué hacer en caso de Emergencias?',
               identificador: 'collapse-2',
               respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta2'
           },
           {
               id: '3',
-              title: 'Pregunta 3',
+              title: '¿A partir de cuándo puedo hacer uso de las asistencias?',
               identificador: 'collapse-3',
               respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta3'
           },
           {
               id: '4',
-              title: 'Pregunta 4',
+              title: '¿Puedo solicitar el seguro si viajo por motivos no turísticos?',
               identificador: 'collapse-4',
               respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta4'
           },
