@@ -4,13 +4,16 @@
       <b-container>
         <b-row class="centrar">
           <b-col class="ocultar-div" sm="12" md="4" style="padding-bottom: 30px">
-           
+           <div>
+             <h5 v-for="(item, index) in items" :key="index"></h5>
+           </div>
           </b-col>
           <b-col class="lineas100" sm="12" md="8">
             <preguntasFrecuentesGenerico
             :preguntas=preguntas
             :nombrepagina=TextoTab
             :itemsMenu=itemsMenu
+            :respuestas=respuestas
             />
           </b-col>
           
@@ -39,25 +42,44 @@ export default {
               id: '1',
               title: '¿Qué hacer en caso de Emergencias?',
               identificador: 'collapse-1',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta1'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Es la central encargada de atender cualquier consulta que puedas tener respecto a tu seguro viaje, así como una respuesta ante accidentes o emergencias..</p>',
+                '<img src="https://miro.medium.com/max/576/1*mh8il3s3hB0Xdpx6ffQLTw.png">'
+                 ],
+              
           },
           {
               id: '2',
-              title: '¿Qué hacer en caso de Emergencias?',
+              title: '¿Qué es la Central de Atención al Cliente?',
               identificador: 'collapse-2',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta2'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Es la central encargada de atender cualquier consulta que puedas tener respecto a tu seguro viaje, así como una respuesta ante accidentes o emergencias..</p>',
+                '<p class="parrafo omnes-medium">Para contactar con la Central de Asistencia deberás comunicarte a los siguientes números:.</p>',
+                '<li class="anchorespuestas estiloparrafo">(01) 500-0000 0-801-00165 (Provincias)</li>',
+                '<p class="parrafo omnes-medium">O al correo</p>',
+                '<li class="anchorespuestas estiloparrafo">servicios@interseguro.com.pe</li>',
+                '<p class="parrafo">*Es importante recalcar que para asistencia de viaje, se deberán recurrir a los números descritos en la sección “asistencia de viaje”.</p>'
+                 ],
           },
           {
               id: '3',
               title: '¿A partir de cuándo puedo hacer uso de las asistencias?',
               identificador: 'collapse-3',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta3'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">A partir del momento de la fecha de vigencia del seguro podrás hacer uso de las asistencias.</p>',
+                 ],
           },
           {
               id: '4',
               title: '¿Puedo solicitar el seguro si viajo por motivos no turísticos?',
               identificador: 'collapse-4',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta4'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">El propósito de tu viaje tendrá que ser turístico. En ningún momento podrá garantizar a personas que ejerzan una actividad profesional en el exterior. Si el motivo del viaje del Beneficiario fuese la ejecución de trabajos o tareas que involucren un riesgo profesional, por realizar tareas de alta especialización en donde se exponga la vida, se esté expuesto a:</p>',
+                '<li class="anchorespuestas estiloparrafo">Sustancias peligrosas</li>',
+                '<li class="anchorespuestas estiloparrafo">Manejo de maquinarias pesadas o que funcionan con gases</li>',
+                '<li class="anchorespuestas estiloparrafo" style="margin-bottom:1rem;">Presión de aire o fluidos hidroneumáticos, que requieran habilidades físicas especiales</li>',
+                '<p class="parrafo omnes-medium">o donde se vea expuesto a peligro y como consecuencia de ello sufra un accidente o una enfermedad consecuencial, Interseguro quedará eximido de toda responsabilidad de prestar sus servicios o asumir costos que se deriven de tales circunstancias, y en estos casos será obligación patronal de asumirlos a través de su plan de responsabilidad de riesgos profesionales.</p>'
+                 ],
           },
       ],
       itemsMenu: [
@@ -102,6 +124,17 @@ export default {
           to: '/preguntas-frecuentes/sobre-covid-19'
         }
       ],
+      respuestas: []
+    }
+  },
+  mounted() {
+    this.agregar();
+    this.items.push(this.item);
+  },
+  methods: {
+    agregar() {
+      this.item = ['<p>Hola, soy un parrafo<p/>', '<p>Hola soy otro parrafo<p/>'];
+      this.items.push(this.item);
     }
   }
 }

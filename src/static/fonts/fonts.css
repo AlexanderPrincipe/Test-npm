@@ -1,0 +1,60 @@
+/* Font Family Omnes */
+@font-face {
+    font-family: "Omnes Black";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-black.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-black.woff") format('woff'),
+         url("./../fonts/omnes/omnes-black.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes Bold";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-bold.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-bold.woff") format('woff'),
+         url("./../fonts/omnes/omnes-bold.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes ExtraLight";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-extralight.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-extralight.woff") format('woff'),
+         url("./../fonts/omnes/omnes-extralight.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes Light";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-light.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-light.woff") format('woff'),
+         url("./../fonts/omnes/omnes-light.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes Medium";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-medium.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-medium.woff") format('woff'),
+         url("./../fonts/omnes/omnes-medium.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes Regular";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-regular.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-regular.woff") format('woff'),
+         url("./../fonts/omnes/omnes-regular.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Omnes Semibold";
+    font-display: swap;
+    src: url("./../fonts/omnes/omnes-semibold.woff2") format('woff2'),
+         url("./../fonts/omnes/omnes-semibold.woff") format('woff'),
+         url("./../fonts/omnes/omnes-semibold.ttf") format('truetype');
+  }
+  
+  /* Fonts */
+  .omnes-black { font-family: 'Omnes Black'; }
+  .omnes-bold { font-family: 'Omnes Bold'; }
+  .omnes-extralight { font-family: 'Omnes ExtraLight'; }
+  .omnes-light { font-family: 'Omnes Light'; }
+  .omnes-medium { font-family: 'Omnes Medium'; }
+  .omnes-regular { font-family: 'Omnes Regular'; }
+  .omnes-semibold { font-family: 'Omnes Semibold'; }
+  

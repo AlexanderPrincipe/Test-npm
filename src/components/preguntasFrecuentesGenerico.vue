@@ -24,7 +24,7 @@
                             </template> 
                                 b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>
-
+              
                 div.linea
                 div(v-for="(item, index) in preguntas" :key="index")             
                     div.centrarpregunta.change(v-b-toggle="item.identificador" style="height:64px;") 
@@ -33,8 +33,8 @@
                         img.when-opened.flecha.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
                         img.when-closed.flecha.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
                     b-collapse.mt-2(:id="item.identificador")
-                        p.parrafo.omnes-medium {{item.respuesta}}
-                        p.parrafo.omnes-medium {{item.respuesta}}
+                        span(v-for="(subrespuesta, index) in item.respuesta")
+                          span(v-html="subrespuesta")
                     div.linea
            
 </template>
@@ -49,6 +49,9 @@ export default {
     itemsMenu: {
       type: Array,
     },
+    respuestas: {
+      type: Array,
+    },
     nombrepagina: String,
   },
   data() {
@@ -56,13 +59,16 @@ export default {
       
     };
   },
-
-  created() {
-
-  },
   mounted() {
-
+    this.agregar();
+    this.items.push(this.item);
   },
+  methods: {
+    agregar() {
+      this.item = ['<p>Hola, soy un parrafo<p/>', '<p>Hola soy otro parrafo<p/>'];
+      this.items.push(this.item);
+    }
+  }
 
 };
 </script>
@@ -245,6 +251,8 @@ export default {
   .anchorespuestas {
       width: 640px;
   }
+
+  
 
 
    @media screen and (max-width: 1200px) {
