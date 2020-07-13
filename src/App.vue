@@ -43,7 +43,7 @@ export default {
               identificador: 'collapse-1',
               respuesta: [ 
                 '<p class="parrafo omnes-medium">Es la central encargada de atender cualquier consulta que puedas tener respecto a tu seguro viaje, así como una respuesta ante accidentes o emergencias..</p>',
-                '<img src="https://miro.medium.com/max/576/1*mh8il3s3hB0Xdpx6ffQLTw.png">'
+                '<img src="">'
                  ],
               
           },
