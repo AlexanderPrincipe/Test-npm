@@ -35,11 +35,13 @@
                     b-collapse.mt-2(:id="item.identificador")
                         span(v-for="(subrespuesta, index) in item.respuesta")
                           span(v-html="subrespuesta")
+                          
                     div.linea
            
 </template>
 
 <script>
+
 export default {
   name: 'preguntasFrecuentesGenerico',
   props: {
@@ -47,9 +49,6 @@ export default {
       type: Array,
     },
     itemsMenu: {
-      type: Array,
-    },
-    respuestas: {
       type: Array,
     },
     nombrepagina: String,
