@@ -129,5 +129,4 @@ src/static/media/icons
 
 
 ---
-⌨️ con ❤️ por [AlexanderPrincipe](https://github.com/AlexanderPrincipe) 😊
 
