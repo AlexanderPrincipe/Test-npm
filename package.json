@@ -1,18 +1,27 @@
 {
   "name": "preguntas-frecuentes-alexander",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "preguntas frecuentes is",
   "main": "./dist/preguntasFrecuentesGenerico.common.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-package": "vue-cli-service build --target lib --name preguntasFrecuentesGenerico ./src/main.js"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "static/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
     "bootstrap-vue": "^2.15.0",
     "chokidar": "^3.4.0",
     "core-js": "^3.6.5",
+    "es6-promise": "^4.2.8",
     "lodash": "^4.17.15",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
@@ -27,7 +36,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "mutationobserver-shim": "^0.3.3",
     "popper.js": "^1.16.0",
     "portal-vue": "^2.1.6",
     "sass": "^1.19.0",
@@ -38,6 +46,20 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexanderPrincipe/Test-npm.git"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
   },
   "keywords": [],
   "author": "",

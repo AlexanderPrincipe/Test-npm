@@ -58,15 +58,9 @@ export default {
       
     };
   },
-  mounted() {
-    this.agregar();
-    this.items.push(this.item);
-  },
+
   methods: {
-    agregar() {
-      this.item = ['<p>Hola, soy un parrafo<p/>', '<p>Hola soy otro parrafo<p/>'];
-      this.items.push(this.item);
-    }
+   
   }
 
 };
