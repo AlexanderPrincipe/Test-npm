@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <section class="mg-top-bot pregunta-frecuente reducirespaciadosection">
+    <section class="mg-top-bot reducirespaciadosection">
       <b-container>
         <b-row class="centrar">
           <b-col class="ocultar-div" sm="12" md="4" style="padding-bottom: 30px">
