@@ -1,6 +1,6 @@
 {
   "name": "preguntas-frecuentes-viajes",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "preguntas frecuentes viajes",
   "main": "./dist/preguntasFrecuentesGenerico.common.js",
   "private": false,
