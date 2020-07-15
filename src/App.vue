@@ -54,10 +54,10 @@ export default {
               respuesta: [ 
                 '<p class="parrafo omnes-medium">Es la central encargada de atender cualquier consulta que puedas tener respecto a tu seguro viaje, así como una respuesta ante accidentes o emergencias..</p>',
                 '<p class="parrafo omnes-medium">Para contactar con la Central de Asistencia deberás comunicarte a los siguientes números:.</p>',
-                '<li class="anchorespuestas estiloparrafo">(01) 500-0000 0-801-00165 (Provincias)</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">(01) 500-0000 0-801-00165 (Provincias)</li>',
                 '<p class="parrafo omnes-medium">O al correo</p>',
-                '<li class="anchorespuestas estiloparrafo">servicios@interseguro.com.pe</li>',
-                '<p class="parrafo">*Es importante recalcar que para asistencia de viaje, se deberán recurrir a los números descritos en la sección “asistencia de viaje”.</p>'
+                '<li class="anchorespuestas estiloparrafo omnes-medium">servicios@interseguro.com.pe</li>',
+                '<p class="parrafo omnes-medium">*Es importante recalcar que para asistencia de viaje, se deberán recurrir a los números descritos en la sección “asistencia de viaje”.</p>'
                  ],
           },
           {
@@ -74,9 +74,9 @@ export default {
               identificador: 'collapse-4',
               respuesta: [ 
                 '<p class="parrafo omnes-medium">El propósito de tu viaje tendrá que ser turístico. En ningún momento podrá garantizar a personas que ejerzan una actividad profesional en el exterior. Si el motivo del viaje del Beneficiario fuese la ejecución de trabajos o tareas que involucren un riesgo profesional, por realizar tareas de alta especialización en donde se exponga la vida, se esté expuesto a:</p>',
-                '<li class="anchorespuestas estiloparrafo">Sustancias peligrosas</li>',
-                '<li class="anchorespuestas estiloparrafo">Manejo de maquinarias pesadas o que funcionan con gases</li>',
-                '<li class="anchorespuestas estiloparrafo" style="margin-bottom:1rem;">Presión de aire o fluidos hidroneumáticos, que requieran habilidades físicas especiales</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Sustancias peligrosas</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Manejo de maquinarias pesadas o que funcionan con gases</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium" style="margin-bottom:1rem;">Presión de aire o fluidos hidroneumáticos, que requieran habilidades físicas especiales</li>',
                 '<p class="parrafo omnes-medium">o donde se vea expuesto a peligro y como consecuencia de ello sufra un accidente o una enfermedad consecuencial, Interseguro quedará eximido de toda responsabilidad de prestar sus servicios o asumir costos que se deriven de tales circunstancias, y en estos casos será obligación patronal de asumirlos a través de su plan de responsabilidad de riesgos profesionales.</p>'
                  ],
           },

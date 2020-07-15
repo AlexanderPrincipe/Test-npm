@@ -65,9 +65,9 @@ data () {
               respuesta: [ 
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>',
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>',
-                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>',
-                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
                 '<p class="parrafo">*Soy un parrafo”.</p>'
                  ],
           },
@@ -85,9 +85,9 @@ data () {
               identificador: 'collapse-4',
               respuesta: [ 
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>',
-                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
-                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
-                '<li class="anchorespuestas estiloparrafo" style="margin-bottom:1rem;">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo omnes-medium" style="margin-bottom:1rem;">Soy una lista</li>',
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>'
                  ],
           },
