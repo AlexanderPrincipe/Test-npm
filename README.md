@@ -134,7 +134,6 @@ data () {
           to: '/preguntas-frecuentes/sobre-covid-19'
         }
       ],
-      respuestas: []
     }
   },
 ```
@@ -149,6 +148,7 @@ src/static/media/icons
 
 ### Observaciones
 
+```
 Las etiquetas <img> funcionan con imagenes http
-
+```
 

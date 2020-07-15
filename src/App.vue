@@ -12,6 +12,7 @@
             <preguntasFrecuentesGenerico
             :preguntas=preguntas
             :nombrepagina=TextoTab
+            :imagenMenu=imagenMenu
             :itemsMenu=itemsMenu
             />
           </b-col>
@@ -36,6 +37,7 @@ export default {
   data () {
     return {
       TextoTab: 'Utilización del seguro',
+      imagenMenu: require("./static/media/icons/Group11Copy.svg"),
       preguntas:[
           {
               id: '1',

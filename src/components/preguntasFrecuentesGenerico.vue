@@ -17,7 +17,7 @@
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
                                     span
-                                        img.tamanoiconodropdown(src="@/static/media/icons/Group11Copy.svg" style="width:2rem;")
+                                        img.tamanoiconodropdown(:src="imagenMenu" style="width:2rem;")
                                         span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombrepagina}}
                                     span
                                         img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
@@ -50,6 +50,9 @@ export default {
     },
     itemsMenu: {
       type: Array,
+    },
+    imagenMenu: {
+      type: Function,
     },
     nombrepagina: String,
   },
