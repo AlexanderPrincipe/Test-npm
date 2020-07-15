@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 1er Paso: Importar en el archivo .vue donde quiera utilizar el componente📋
 ```
-import { preguntasFrecuentesGenerico } from 'preguntas-frecuentes-alexander'
+import { preguntasFrecuentesGenerico } from 'preguntas-frecuentes-viajes'
 
 export default {
     components: {
@@ -44,33 +44,52 @@ export default {
  :itemsMenu=itemsMenu
 />
 
-data() {
+data () {
     return {
-      TextoTab:'Utilización del seguro',
+      TextoTab: 'Utilización del seguro',
       preguntas:[
           {
               id: '1',
-              title: '¿Qué hacer en caso de Emergencias? ',
+              title: '¿Qué hacer en caso de Emergencias?',
               identificador: 'collapse-1',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta1111111111111'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                '<img src="">'
+                 ],
+              
           },
           {
               id: '2',
               title: '¿Qué es la Central de Atención al Cliente?',
               identificador: 'collapse-2',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta2'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<p class="parrafo">*Soy un parrafo”.</p>'
+                 ],
           },
           {
               id: '3',
               title: '¿A partir de cuándo puedo hacer uso de las asistencias?',
               identificador: 'collapse-3',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta3'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                 ],
           },
           {
               id: '4',
               title: '¿Puedo solicitar el seguro si viajo por motivos no turísticos?',
               identificador: 'collapse-4',
-              respuesta: 'Respuesta Respuesta Respuesta Respuesta Respuesta4'
+              respuesta: [ 
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>',
+                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo">Soy una lista</li>',
+                '<li class="anchorespuestas estiloparrafo" style="margin-bottom:1rem;">Soy una lista</li>',
+                '<p class="parrafo omnes-medium">Soy un parrafo</p>'
+                 ],
           },
       ],
       itemsMenu: [
@@ -115,9 +134,9 @@ data() {
           to: '/preguntas-frecuentes/sobre-covid-19'
         }
       ],
-      
+      respuestas: []
     }
-  }
+  },
 ```
 
 ### 3er Paso: Tener las imágenes correspondientes en la siguiente ruta📋
@@ -128,5 +147,8 @@ src/static/media/icons
 ![Captura de pantalla de 2020-07-03 20-23-41](https://user-images.githubusercontent.com/31213239/86502671-4f6e4b00-bd6b-11ea-9dac-7d7854d0c046.png)
 
 
----
+### Observaciones
+
+Las etiquetas <img> funcionan con imagenes http
+
 
