@@ -1,6 +1,6 @@
 {
-  "name": "preguntas-frecuentes-alexander",
-  "version": "0.4.2",
+  "name": "preguntas-frecuentes-viajes",
+  "version": "0.4.6",
   "description": "preguntas frecuentes is",
   "main": "./dist/preguntasFrecuentesGenerico.common.js",
   "private": false,

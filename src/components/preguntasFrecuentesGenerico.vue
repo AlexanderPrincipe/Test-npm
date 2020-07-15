@@ -91,6 +91,10 @@ export default {
        align-items: center;
      }
 
+     .centrarpregunta:focus {
+       outline: none;
+     }
+
   .opcionesdropdown {
       color: #0754C4 !important;
       font-size: 18px;
