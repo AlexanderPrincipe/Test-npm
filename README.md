@@ -24,8 +24,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
+### 1er Paso: Instalar el paquete📋
+```
+npm i preguntas-frecuentes-viajes
+```
 
-### 1er Paso: Importar en el archivo .vue donde quiera utilizar el componente📋
+### 2do Paso: Importar en el archivo .vue donde quiera utilizar el componente📋
 ```
 import { preguntasFrecuentesGenerico } from 'preguntas-frecuentes-viajes'
 
@@ -36,17 +40,21 @@ export default {
 }
 ```
 
-### 2do Paso: Ingresar los datos requeridos :octocat: 
+### 3er Paso: Ingresar los datos requeridos :octocat: 
 ```
-<preguntasFrecuentesGenerico
- :preguntas=preguntas
- :nombrepagina=TextoTab
- :itemsMenu=itemsMenu
+<preguntasFrecuentesGenerico"
+ :preguntas="preguntas"                                 <!-- Array con preguntas -->
+ :itemsMenu="itemsMenu"                                 <!-- Los items que iran en el Menú desplegable -->
+ :imagenMenu="imagenMenu"                               <!-- La imagen que ira en el menú desplegable -->
+ :regresarPrincipal="regresarPrincipal"                 <!-- Ruta del breadcrumb -->
+ :nombrepagina="TextoTab"                               <!-- Nombre de la pagina actual -->
 />
 
 data () {
     return {
       TextoTab: 'Utilización del seguro',
+      imagenMenu: require("@/static/media/icons/Group2Copy.svg"),
+      regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
           {
               id: '1',
@@ -68,7 +76,7 @@ data () {
                 '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
                 '<p class="parrafo omnes-medium">Soy un parrafo</p>',
                 '<li class="anchorespuestas estiloparrafo omnes-medium">Soy una lista</li>',
-                '<p class="parrafo">*Soy un parrafo”.</p>'
+                '<p class="parrafo omnes-medium">*Soy un parrafo”.</p>'
                  ],
           },
           {
@@ -138,7 +146,7 @@ data () {
   },
 ```
 
-### 3er Paso: Tener las imágenes correspondientes en la siguiente ruta📋
+### 4to Paso: Tener las imágenes correspondientes en la siguiente ruta📋
 ```
 src/static/media/icons
 ```
@@ -149,6 +157,6 @@ src/static/media/icons
 ### Observaciones
 
 ```
-Las etiquetas <img> funcionan con imagenes http
+Las etiquetas 'img' funcionan con imagenes http
 ```
 

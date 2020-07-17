@@ -5,14 +5,14 @@
         <b-row class="centrar">
           <b-col class="ocultar-div" sm="12" md="4" style="padding-bottom: 30px">
            <div>
-             <h5 v-for="(item, index) in items" :key="index"></h5>
            </div>
           </b-col>
           <b-col class="lineas100" sm="12" md="8">
             <preguntasFrecuentesGenerico
-            :preguntas=preguntas
-            :nombrepagina=TextoTab
+            :preguntas=preguntas           
+            :nombrepagina=TextoTab         
             :imagenMenu=imagenMenu
+            :regresarPrincipal=regresarPrincipal
             :itemsMenu=itemsMenu
             />
           </b-col>
@@ -37,7 +37,8 @@ export default {
   data () {
     return {
       TextoTab: 'Utilización del seguro',
-      imagenMenu: require("./static/media/icons/Group11Copy.svg"),
+      imagenMenu: "",
+      regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
           {
               id: '1',

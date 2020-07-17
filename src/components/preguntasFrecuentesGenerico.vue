@@ -1,7 +1,7 @@
 <template lang="pug">
     div
         div.moverizquierda
-          b-breadcrumb-item.achicar.quitarpunto(to="/preguntas-frecuentes/")
+          b-breadcrumb-item.achicar.quitarpunto(:to="regresarPrincipal")
             img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
           <router-link to="/preguntas-frecuentes/">
             span.omnes-medium.linkprincipal Principal
@@ -22,7 +22,7 @@
                                     span
                                         img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
                             </template> 
-                                b-dropdown-item.opcionesdropdown(style="font-family: Omnes Medium" :to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
+                                b-dropdown-item.opcionesdropdown.omnes-medium(:to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>
               
                 div.linea
@@ -32,7 +32,7 @@
                         div.lista.omnes-medium.when-closed.acomodarlista {{item.title}} 
                         img.when-opened.flecha.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
                         img.when-closed.flecha.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
-                    b-collapse.mt-2(:id="item.identificador")
+                    b-collapse.mt-2(:id="item.identificador" accordion="accordion")
                         span(v-for="(subrespuesta, index) in item.respuesta")
                           span(v-html="subrespuesta")
                           
@@ -51,9 +51,8 @@ export default {
     itemsMenu: {
       type: Array,
     },
-    imagenMenu: {
-      type: Function,
-    },
+    regresarPrincipal: String,
+    imagenMenu: String,
     nombrepagina: String,
   },
   data() {
@@ -70,6 +69,10 @@ export default {
 </script>
 
 <style scoped>
+
+    .dropdown-item {
+      font-family: "Omnes Medium";
+    }
 
     .collapsed > .when-opened,
     :not(.collapsed) > .when-closed {
@@ -171,7 +174,7 @@ export default {
 
 .estiloparrafo {
   color: #6f6f6f;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 30px;
   text-align: left;
@@ -180,7 +183,7 @@ export default {
 
 .lista {
   color: #6F6F6F;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 24px;
   width: 550px;
@@ -189,7 +192,7 @@ export default {
 
 .lista2 {
   color: #0754C4;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 24px;
   width: 550px;
@@ -239,7 +242,7 @@ export default {
 
   .parrafo {
     color: #6f6f6f;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 30px;
     width: 640px;
@@ -288,7 +291,6 @@ export default {
       width: 94%;
     }
 
-
     .flecha {
       position: relative;
       padding-right: 15px;
@@ -309,7 +311,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
       width: 585px;
@@ -334,7 +336,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
       width: 96%;
@@ -344,7 +346,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 18px;
+      font-size: 1.1rem;
       font-weight: 500;
       line-height: 24px;
       width: 409px;
@@ -353,7 +355,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 18px;
+      font-size: 1.1rem;
       font-weight: 500;
       line-height: 24px;
       width: 409px;
@@ -362,7 +364,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
       width: 435px;
@@ -395,7 +397,7 @@ export default {
 
      .parrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
       width: 525px;
@@ -410,7 +412,7 @@ export default {
 
     .estiloparrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 28px;
       text-align: left;
@@ -433,7 +435,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       line-height: 20px;
       width: 400px;
@@ -442,7 +444,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       line-height: 20px;
       width: 400px;
@@ -475,7 +477,7 @@ export default {
 
      .parrafo {
       color: #6f6f6f;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       line-height: 26px;
       width: 500px;
@@ -510,7 +512,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 15px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 26px;
       width: 460px;
@@ -521,7 +523,7 @@ export default {
     
     .anchorespuestas {
       width: 430px;
-      font-size: 15px;
+      font-size: 0.9rem;
     }
 
     .titulodropdown {
@@ -545,7 +547,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 15px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 440px;
@@ -556,7 +558,7 @@ export default {
     
     .anchorespuestas {
       width: 420px;
-      font-size: 15px;
+      font-size: 0.9rem;
     }
 
      
@@ -571,7 +573,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 380px;
@@ -580,7 +582,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 380px;
@@ -589,7 +591,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 420px;
@@ -600,7 +602,7 @@ export default {
     
     .anchorespuestas {
       width: 390px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
 
@@ -612,7 +614,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 360px;
@@ -621,7 +623,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 360px;
@@ -630,7 +632,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 405px;
@@ -641,7 +643,7 @@ export default {
     
     .anchorespuestas {
       width: 375px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
     
@@ -653,7 +655,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 320px;
@@ -662,7 +664,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 320px;
@@ -671,7 +673,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 395px;
@@ -682,7 +684,7 @@ export default {
     
     .anchorespuestas {
       width: 365px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
    }
@@ -691,7 +693,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 330px;
@@ -700,7 +702,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 330px;
@@ -716,7 +718,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 390px;
@@ -727,7 +729,7 @@ export default {
     
     .anchorespuestas {
       width: 360px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
    }
 
@@ -735,7 +737,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 320px;
@@ -744,7 +746,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 320px;
@@ -760,7 +762,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 370px;
@@ -771,7 +773,7 @@ export default {
     
     .anchorespuestas {
       width: 340px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
    
    }
@@ -779,7 +781,7 @@ export default {
    @media screen and (max-width: 381px) {
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 300px;
@@ -788,7 +790,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 300px;
@@ -797,7 +799,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 340px;
@@ -808,7 +810,7 @@ export default {
     
     .anchorespuestas {
       width: 310px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
    
 
@@ -818,7 +820,7 @@ export default {
 
      .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 290px;
@@ -827,7 +829,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 290px;
@@ -840,7 +842,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
       width: 320px;
@@ -851,7 +853,7 @@ export default {
     
     .anchorespuestas {
       width: 295px;
-      font-size: 13px;
+      font-size: 0.9rem;
     }
 
 
@@ -864,7 +866,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
       width: 320px;
@@ -875,12 +877,12 @@ export default {
     
     .anchorespuestas {
       width: 300px;
-      font-size: 13px;
+      font-size: 0.8rem;
     }
     
     .anchorespuestas {
       width: 285px;
-      font-size: 13px;
+      font-size: 0.8rem;
     }
 
    }
@@ -892,7 +894,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
       width: 310px;
@@ -903,12 +905,12 @@ export default {
     
     .anchorespuestas {
       width: 280px;
-      font-size: 13px;
+      font-size: 0.8rem;
     }
 
     .titulodropdown {
       color: #0754C4;
-      font-size: 18px;
+      font-size: 1.1rem;
       font-weight: 600;
       line-height: 16px;
       width: 521px;
@@ -930,7 +932,7 @@ export default {
 
     .lista {
       color: #6F6F6F;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 275px;
@@ -939,7 +941,7 @@ export default {
 
     .lista2 {
       color: #0754C4;
-      font-size: 14px;
+      font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 275px;
@@ -948,7 +950,7 @@ export default {
 
     .parrafo {
       color: #6f6f6f;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
       width: 300px;
@@ -959,7 +961,7 @@ export default {
     
     .anchorespuestas {
       width: 270px;
-      font-size: 13px;
+      font-size: 0.8rem;
     }
    }
 </style>
