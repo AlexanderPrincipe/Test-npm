@@ -1,18 +1,18 @@
 <template lang="pug">
     div
         div.moverizquierda
-          b-breadcrumb-item.achicar.quitarpunto(:to="regresarPrincipal")
+          b-breadcrumb-item.achicarpf.quitarpunto(:to="regresarPrincipal")
             img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
           <router-link to="/preguntas-frecuentes/">
             span.omnes-medium.linkprincipal Principal
           </router-link>   
           span.omnes-medium(style="padding-right:6px;") ›
-          span.omnes-semibold.tamanonuevolink(style="color: #0754C4;") {{nombrepagina}}
+          span.omnes-semibold(style="color: #0754C4; font-size: 13px;") {{nombrepagina}}
 
-        div.pd-top-bot.reducirpadding
-                h5.omnes-medium.titulo.ocultar-div(style="padding-bottom:15px") {{nombrepagina}}
+        div.pd-top-bot(style="padding-top:8px;")
+                h5.omnes-medium.titulopf.ocultar-div(style="padding-bottom:15px") {{nombrepagina}}
                 div.centrar
-                    div.ocultarmayor576px.centrar.rectangulo(style="margin-bottom:20px; margin-top:0px")
+                    div.ocultar.centrar.rectangulo(style="margin-bottom:20px; margin-top:0px")
                         <b-dropdown class="m-2" menu-class="w-100" style="width:100%;" variant="white" toggle-class="text-decoration-none" no-caret>
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
@@ -27,11 +27,11 @@
               
                 div.linea
                 div(v-for="(item, index) in preguntas" :key="index")             
-                    div.centrarpregunta.change(v-b-toggle="item.identificador" style="height:64px;") 
-                        div.lista2.omnes-semibold.when-opened.acomodarlista {{item.title}} 
-                        div.lista.omnes-medium.when-closed.acomodarlista {{item.title}} 
-                        img.when-opened.flecha.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
-                        img.when-closed.flecha.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
+                    div.centrarpregunta(v-b-toggle="item.identificador" style="height:64px;") 
+                        div.lista2pf.omnes-semibold.when-opened.acomodarlista {{item.title}} 
+                        div.listapf.omnes-medium.when-closed.acomodarlista {{item.title}} 
+                        img.when-opened.flechapf.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
+                        img.when-closed.flechapf.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
                     b-collapse.mt-2(:id="item.identificador" accordion="accordion")
                         span(v-for="(subrespuesta, index) in item.respuesta")
                           span(v-html="subrespuesta")
@@ -68,7 +68,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .dropdown-item {
       font-family: "Omnes Medium";
@@ -95,6 +95,7 @@ export default {
     .centrarpregunta {
        display: flex;
        align-items: center;
+       justify-content: space-between;
      }
 
      .centrarpregunta:focus {
@@ -126,12 +127,9 @@ export default {
       height:8px;
     }
 
-  .change {
-    display: flex;
-    justify-content: space-between;
-  }
+ 
 
-  .flecha {
+  .flechapf {
     position: relative;
     left: -90px;
   }
@@ -140,16 +138,7 @@ export default {
     text-decoration: none;
   }
 
-  .principal {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    padding: 10px;
-  }
-
-
-.titulo {
+.titulopf {
   color: #0754C4;
   font-size: 30px;
   font-weight: 600;
@@ -157,13 +146,6 @@ export default {
   width: 521px;
   text-align: left;
   padding-top: 15px;
-}
-
-.subtitulo {
-  color: #6F6F6F;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: left;
 }
 
 .linea {
@@ -181,7 +163,7 @@ export default {
   padding-top: 0px;
 }
 
-.lista {
+.listapf {
   color: #6F6F6F;
   font-size: 1.1rem;
   font-weight: 500;
@@ -190,7 +172,7 @@ export default {
   text-align: left;
 }
 
-.lista2 {
+.lista2pf {
   color: #0754C4;
   font-size: 1.1rem;
   font-weight: 500;
@@ -214,7 +196,7 @@ export default {
     color: #8B8B91;
   }
 
-  .achicar {
+  .achicarpf {
     width: 1.8%;
     display: inline-block;
   }
@@ -251,9 +233,6 @@ export default {
   }
 
 
-  .anchorespuestas {
-      width: 640px;
-  }
 
   
 
@@ -291,7 +270,7 @@ export default {
       width: 94%;
     }
 
-    .flecha {
+    .flechapf {
       position: relative;
       padding-right: 15px;
       left: 0px;
@@ -318,15 +297,12 @@ export default {
       text-align: left;
       padding-top: 0px;
     }
-    
-  .anchorespuestas {
-      width: 585px;
-  }
+  
 
    }
 
    @media screen and (min-width: 1200px) {
-     .ocultarmayor576px {
+     .ocultar {
        display: none;
      }
 
@@ -344,7 +320,7 @@ export default {
       padding-top: 0px;
     }
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 1.1rem;
       font-weight: 500;
@@ -353,7 +329,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 1.1rem;
       font-weight: 500;
@@ -372,11 +348,8 @@ export default {
       padding-top: 0px;
     }
     
-  .anchorespuestas {
-      width: 435px;
-  }
 
-  .achicar {
+  .achicarpf {
     width: 2.1%;
     display: inline-block;
   }
@@ -386,7 +359,7 @@ export default {
 
     @media screen and (max-width: 767px) {
 
-     .lineas100{ 
+      .lineas100{ 
       padding-left: 0px;
       padding-right: 0px;
      }
@@ -406,9 +379,7 @@ export default {
       padding-left: 20px;
     }
     
-    .anchorespuestas {
-        width: 485px;
-    }
+
 
     .estiloparrafo {
       color: #6f6f6f;
@@ -433,7 +404,7 @@ export default {
 
    @media screen and (max-width: 540px) {
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 1rem;
       font-weight: 500;
@@ -442,7 +413,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 1rem;
       font-weight: 500;
@@ -460,19 +431,8 @@ export default {
       color:#9A9AA3;
     }
 
-    .subtitulo {
-      color: #6F6F6F;
-      font-size: 18px;
-      font-weight: 500;
-      text-align: left;
-    }
-
     .reducirespaciadosection {
       margin-top: 18px;
-    }
-
-    .reducirpadding {
-      padding-top: 8px;
     }
 
      .parrafo {
@@ -486,13 +446,7 @@ export default {
       padding-left: 20px;
     }
     
-    .anchorespuestas {
-        width: 465px;
-    }
-
-    .tamanonuevolink{ 
-      font-size: 13px;
-    } 
+    
    }
 
    @media screen and (max-width: 509px) {
@@ -519,11 +473,6 @@ export default {
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
-    }
-    
-    .anchorespuestas {
-      width: 430px;
-      font-size: 0.9rem;
     }
 
     .titulodropdown {
@@ -555,12 +504,7 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 420px;
-      font-size: 0.9rem;
-    }
-
+  
      
    }
 
@@ -571,7 +515,7 @@ export default {
       height: 6px;
     }
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -580,7 +524,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -600,19 +544,13 @@ export default {
       padding-left: 20px;
     }
     
-    .anchorespuestas {
-      width: 390px;
-      font-size: 0.9rem;
-    }
-
-
 
    }
 
 
    @media screen and (max-width: 455px) {
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -621,7 +559,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -640,20 +578,12 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 375px;
-      font-size: 0.9rem;
-    }
-
-    
-
 
    }
 
    @media screen and (max-width: 440px) {
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -662,7 +592,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -681,17 +611,12 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 365px;
-      font-size: 0.9rem;
-    }
-
+  
    }
 
    @media screen and (max-width: 425px) {
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -700,19 +625,12 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 330px;
-      text-align: left;
-    }
-
-    .subtitulo {
-      color: #6F6F6F;
-      font-size: 17px;
-      font-weight: 500;
       text-align: left;
     }
 
@@ -726,16 +644,12 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 360px;
-      font-size: 0.9rem;
-    }
+
    }
 
    @media screen and (max-width: 400px) {
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -744,19 +658,12 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 18px;
       width: 320px;
-      text-align: left;
-    }
-
-    .subtitulo {
-      color: #6F6F6F;
-      font-size: 16px;
-      font-weight: 500;
       text-align: left;
     }
 
@@ -770,16 +677,11 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 340px;
-      font-size: 0.9rem;
-    }
    
    }
 
    @media screen and (max-width: 381px) {
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -788,7 +690,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -807,18 +709,12 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 310px;
-      font-size: 0.9rem;
-    }
-   
 
    }
 
    @media screen and (max-width: 359px) {
 
-     .lista {
+     .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -827,7 +723,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -835,10 +731,6 @@ export default {
       width: 290px;
       text-align: left;
     }
-
-     .subtitulo {
-       font-size: 15px;
-     }
 
     .parrafo {
       color: #6f6f6f;
@@ -849,20 +741,13 @@ export default {
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
-    }
-    
-    .anchorespuestas {
-      width: 295px;
-      font-size: 0.9rem;
     }
 
 
    }
 
    @media screen and (max-width: 349px) {
-     .subtitulo {
-       font-size: 15px;
-     }
+
 
     .parrafo {
       color: #6f6f6f;
@@ -874,23 +759,10 @@ export default {
       padding-top: 0px;
       padding-left: 20px;
     }
-    
-    .anchorespuestas {
-      width: 300px;
-      font-size: 0.8rem;
-    }
-    
-    .anchorespuestas {
-      width: 285px;
-      font-size: 0.8rem;
-    }
 
    }
 
    @media screen and (max-width: 338px) {
-     .subtitulo {
-       font-size: 14.5px;
-     }
 
     .parrafo {
       color: #6f6f6f;
@@ -903,11 +775,6 @@ export default {
       padding-left: 20px;
     }
     
-    .anchorespuestas {
-      width: 280px;
-      font-size: 0.8rem;
-    }
-
     .titulodropdown {
       color: #0754C4;
       font-size: 1.1rem;
@@ -926,11 +793,8 @@ export default {
    }
 
    @media screen and (max-width: 330px) {
-     .subtitulo {
-       font-size: 14.5px;
-     }
 
-    .lista {
+    .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
       font-weight: 500;
@@ -939,7 +803,7 @@ export default {
       text-align: left;
     }
 
-    .lista2 {
+    .lista2pf {
       color: #0754C4;
       font-size: 0.9rem;
       font-weight: 500;
@@ -959,9 +823,5 @@ export default {
       padding-left: 20px;
     }
     
-    .anchorespuestas {
-      width: 270px;
-      font-size: 0.8rem;
-    }
    }
 </style>

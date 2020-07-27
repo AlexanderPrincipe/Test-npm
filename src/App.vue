@@ -7,7 +7,7 @@
            <div>
            </div>
           </b-col>
-          <b-col class="lineas100" sm="12" md="8">
+          <b-col class="sinborde" sm="12" md="8">
             <preguntasFrecuentesGenerico
             :preguntas=preguntas           
             :nombrepagina=TextoTab         
@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       TextoTab: 'Utilización del seguro',
-      imagenMenu: "",
+      imagenMenu: " ",
       regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
           {
@@ -168,11 +168,6 @@ export default {
   text-align: center;
   padding: 9px;
   margin-left: 0px;
-}
-
-.tamañoflecha2 {
-  width: 18px;
-  height: 10px;
 }
 
 .movertitulodropdown {
@@ -331,11 +326,6 @@ a {
     text-align: left;
   }
 
-  .tamañoflecha2 {
-    width: 33px;
-    height: 10px;
-  }
-
   .rectangulo {
     background-color: #ffffff;
     border-radius: 4.2px;
@@ -427,10 +417,11 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .lineas100 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+
+  .sinborde{ 
+      padding-left: 0px;
+      padding-right: 0px;
+     }
 
   .acomodarlista {
     padding-left: 20px;
@@ -540,11 +531,6 @@ a {
     height: 60px;
   }
 
-  .tamañoflecha2 {
-    width: 30px;
-    height: 8px;
-  }
-
   .parrafo {
     color: #6f6f6f;
     font-size: 15px;
@@ -596,11 +582,6 @@ a {
 }
 
 @media screen and (max-width: 469px) {
-  .tamañoflecha2 {
-    width: 26px;
-    height: 6px;
-  }
-
   .lista {
     color: #6f6f6f;
     font-size: 14px;
