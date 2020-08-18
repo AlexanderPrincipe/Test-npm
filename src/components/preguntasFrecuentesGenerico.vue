@@ -15,11 +15,11 @@
                         <b-dropdown class="m-2" menu-class="w-100" style="width:100%;" variant="white" toggle-class="text-decoration-none" no-caret>
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
-                                    span
-                                        img.tamanoiconodropdown(:src="imagenMenu" style="width:2rem;")
-                                        span.movertitulodropdown.titulodropdown.omnes-medium(style="padding-left:10px;padding-right:20px;") {{nombrepagina}}
-                                    span
-                                        img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png")
+                                    div(style="display: flex; align-items: center;")
+                                        img.tamanoiconodropdown(:src="imagenMenu" style="width:2rem; float:left; ")
+                                        div.omnes-medium(style="padding-left:10px; padding-right:20px; color: #0754C4; font-size: 1.1rem; font-weight: 600; float:left;") {{nombrepagina}}
+                                    div
+                                        img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png" style="width:15px; height:auto;")
                             </template> 
                                 b-dropdown-item.opcionesdropdown.omnes-medium(:to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>
@@ -120,11 +120,6 @@ export default {
       height:10px;
     }
 
-  .movertitulodropdown {
-      position: relative;
-      top: 2px;
-    }
-
     .tamanoflechadropdown {
       width:15px; 
       height:8px;
@@ -146,7 +141,6 @@ export default {
   font-size: 30px;
   font-weight: 600;
   line-height: 16px;
-  width: 521px;
   text-align: left;
   padding-top: 15px;
 }
@@ -245,9 +239,6 @@ export default {
       color: #0754C4;
       font-size: 25px;
       font-weight: 600;
-      line-height: 16px;
-      width: 521px;
-      text-align: left;
     }
 
     .tamanoflecha2 {
@@ -470,15 +461,11 @@ export default {
       color: #0754C4;
       font-size: 20px;
       font-weight: 600;
-      line-height: 16px;
-      width: 521px;
-      height: 10px;
-      text-align: left;
     }
 
     .tamanoiconodropdown {
       width:40px; 
-      height:38px;
+      height:auto;
   } 
 
    }
@@ -770,15 +757,11 @@ export default {
       color: #0754C4;
       font-size: 1.1rem;
       font-weight: 600;
-      line-height: 16px;
-      width: 521px;
-      height: 10px;
-      text-align: left;
     }
 
     .tamanoiconodropdown {
       width:35px; 
-      height:32px;
+      height:auto;
   }
 
    }

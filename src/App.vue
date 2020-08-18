@@ -36,7 +36,7 @@ export default {
   },
   data () {
     return {
-      TextoTab: 'Utilización del seguro',
+      TextoTab: 'Utilización del seguro seguro seguro',
       imagenMenu: require("./static/media/icons/Group11Copy.svg"),
       regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
