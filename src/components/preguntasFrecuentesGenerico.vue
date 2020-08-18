@@ -16,14 +16,13 @@
                             <template v-slot:button-content>       
                                 div.izquierdadesplegable   
                                     div(style="display: flex; align-items: center;")
-                                        img.tamanoiconodropdown(:src="imagenMenu" style="width:2rem; float:left; ")
-                                        div.omnes-medium(style="padding-left:10px; padding-right:20px; color: #0754C4; font-size: 1.1rem; font-weight: 600; float:left;") {{nombrepagina}}
+                                        img.tamanoiconodropdown(:src="imagenMenu" style="width:2rem; float:left;")
+                                        div.titulo_dropdown.omnes-medium(style="white-space: break-spaces;") {{nombrepagina}}
                                     div
                                         img.tamanoflechadropdown(src="@/static/media/icons/arrow_down.png" style="width:15px; height:auto;")
                             </template> 
                                 b-dropdown-item.opcionesdropdown.omnes-medium(:to="item.to" v-for="(item, index) in itemsMenu" :key="index") {{item.title}}
                         </b-dropdown>
-              
                 div.linea
                 div(v-for="(item, index) in preguntas" :key="index")             
                     div.centrarpregunta(v-b-toggle="item.identificador" style="height:64px;") 
@@ -71,6 +70,19 @@ export default {
 
     .dropdown-item {
       font-family: "Omnes Medium";
+    }
+
+    .titulo_dropdown {
+      width: 100%; 
+      height: auto; 
+      word-wrap: break-word; 
+      padding-left:10px; 
+      padding-right:20px; 
+      color: #0754C4; 
+      font-size: 1.5rem; 
+      font-weight: 600;
+      text-align: left; 
+      line-height: 25px;
     }
 
     .breadcrumb-item {
@@ -140,7 +152,7 @@ export default {
   color: #0754C4;
   font-size: 30px;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 30px;
   text-align: left;
   padding-top: 15px;
 }
@@ -206,6 +218,7 @@ export default {
     position: relative;
     right: 0px;
     padding-bottom: 4px;
+    width: 96%;
   }
 
   .parrafo {
@@ -234,12 +247,6 @@ export default {
        align-content: center;
        align-items: center;
      }
-
-     .titulodropdown {
-      color: #0754C4;
-      font-size: 25px;
-      font-weight: 600;
-    }
 
     .tamanoflecha2 {
       width: 33px;
@@ -377,6 +384,7 @@ export default {
       position: relative;
       right: -10px;
       padding-bottom: 4px;
+      width: 96%;
     }
 
     
@@ -385,6 +393,19 @@ export default {
    }
 
    @media screen and (max-width: 540px) {
+
+     .titulo_dropdown {
+        width: 100%; 
+        height: auto; 
+        word-wrap: break-word; 
+        padding-left:10px; 
+        padding-right:20px; 
+        color: #0754C4; 
+        font-size: 1.2rem; 
+        font-weight: 600;
+        text-align: left;
+        line-height: 20px; 
+      }
 
     .listapf {
       color: #6F6F6F;
@@ -457,12 +478,6 @@ export default {
       padding-left: 20px;
     }
 
-    .titulodropdown {
-      color: #0754C4;
-      font-size: 20px;
-      font-weight: 600;
-    }
-
     .tamanoiconodropdown {
       width:40px; 
       height:auto;
@@ -487,6 +502,20 @@ export default {
    }
 
    @media screen and (max-width: 469px) {
+
+    
+    .titulo_dropdown {
+        width: 100%; 
+        height: auto; 
+        word-wrap: break-word; 
+        padding-left:10px; 
+        padding-right:20px; 
+        color: #0754C4; 
+        font-size: 1.1rem; 
+        font-weight: 600;
+        text-align: left;
+        line-height: 20px; 
+    }
 
     .tamanoflecha2 {
       width: 26px;
@@ -659,6 +688,20 @@ export default {
    }
 
    @media screen and (max-width: 381px) {
+
+     .titulo_dropdown {
+        width: 100%; 
+        height: auto; 
+        word-wrap: break-word; 
+        padding-left:10px; 
+        padding-right:20px; 
+        color: #0754C4; 
+        font-size: 1.1rem; 
+        font-weight: 600;
+        text-align: left;
+        line-height: 18px; 
+    }
+
     .listapf {
       color: #6F6F6F;
       font-size: 0.9rem;
@@ -751,12 +794,6 @@ export default {
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
-    }
-    
-    .titulodropdown {
-      color: #0754C4;
-      font-size: 1.1rem;
-      font-weight: 600;
     }
 
     .tamanoiconodropdown {
