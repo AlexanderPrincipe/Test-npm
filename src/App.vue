@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       TextoTab: 'Utilización del seguro',
-      imagenMenu: " ",
+      imagenMenu: require("./static/media/icons/Group11Copy.svg"),
       regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
           {
@@ -202,7 +202,7 @@ export default {
   padding: 10px;
 }
 
-.titulo {
+.titulopf {
   color: #0754c4;
   font-size: 30px;
   font-weight: 600;

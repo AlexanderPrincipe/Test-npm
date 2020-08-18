@@ -1,13 +1,12 @@
 <template lang="pug">
     div
         div.moverizquierda
-          b-breadcrumb-item.achicarpf.quitarpunto(:to="regresarPrincipal")
-            img.d-inline.w-1(src="@/static/media/icons/PathCopy3.png")
-          <router-link to="/preguntas-frecuentes/">
+          b-breadcrumb-item(:to="regresarPrincipal")
+            img.w-1(src="@/static/media/icons/PathCopy3.png")
             span.omnes-medium.linkprincipal Principal
-          </router-link>   
-          span.omnes-medium(style="padding-right:6px;") ›
-          span.omnes-semibold(style="color: #0754C4; font-size: 13px;") {{nombrepagina}}
+          span
+            span.omnes-medium(style="padding-right:6px;") ›
+            span.omnes-semibold(style="color: #0754C4; font-size: 13px;") {{nombrepagina}}
 
         div.pd-top-bot(style="padding-top:8px;")
                 h5.omnes-medium.titulopf.ocultar-div(style="padding-bottom:15px") {{nombrepagina}}
@@ -74,6 +73,10 @@ export default {
       font-family: "Omnes Medium";
     }
 
+    .breadcrumb-item {
+      display: inline-block;
+    }
+
     .collapsed > .when-opened,
     :not(.collapsed) > .when-closed {
         display: none;
@@ -84,7 +87,7 @@ export default {
     }
 
     .linkprincipal {
-      padding-left:3px;
+      padding-left:5px;
       padding-right:6px;
       padding-bottom:7px;
       padding-top:7px; 
@@ -179,7 +182,6 @@ export default {
   line-height: 24px;
   width: 550px;
   text-align: left;
-
 }
 
 
@@ -194,16 +196,6 @@ export default {
   a {
     text-decoration: none;
     color: #8B8B91;
-  }
-
-  .achicarpf {
-    width: 1.8%;
-    display: inline-block;
-  }
-
-  .quitarpunto {
-    list-style:none;
-    max-width: 20px;
   }
 
   ul.breadcrumb li+li:before {
@@ -350,7 +342,6 @@ export default {
     
 
   .achicarpf {
-    width: 2.1%;
     display: inline-block;
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "preguntas-frecuentes-viajes",
-  "version": "0.6.2",
+  "version": "0.6.5",
   "description": "preguntas frecuentes viajes",
   "main": "./dist/preguntasFrecuentesGenerico.common.js",
   "private": false,
@@ -59,7 +59,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-use-v-if-with-v-for": "off"
+    }
   },
   "keywords": [],
   "author": "",
