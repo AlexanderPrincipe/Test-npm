@@ -29,7 +29,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm i preguntas-frecuentes-viajes
 ```
 
-### 2do Paso: Importar en el archivo .vue donde quiera utilizar el componente 📋
+### 2do Paso: Importar en el archivo .vue donde quiera utilizar el componente :octocat:
 ```
 import { preguntasFrecuentesGenerico } from 'preguntas-frecuentes-viajes'
 
@@ -40,7 +40,7 @@ export default {
 }
 ```
 
-### 3er Paso: Ingresar los datos requeridos 📋
+### 3er Paso: Ingresar los datos requeridos :octocat:
 ```
 <preguntasFrecuentesGenerico"
  :preguntas="preguntas"                                 <!-- Array con preguntas -->
