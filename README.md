@@ -24,12 +24,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### 1er Paso: Instalar el paquete📋
+### 1er Paso: Instalar el paquete 📋
 ```
 npm i preguntas-frecuentes-viajes
 ```
 
-### 2do Paso: Importar en el archivo .vue donde quiera utilizar el componente📋
+### 2do Paso: Importar en el archivo .vue donde quiera utilizar el componente 📋
 ```
 import { preguntasFrecuentesGenerico } from 'preguntas-frecuentes-viajes'
 
@@ -40,7 +40,7 @@ export default {
 }
 ```
 
-### 3er Paso: Ingresar los datos requeridos :octocat: 
+### 3er Paso: Ingresar los datos requeridos 📋
 ```
 <preguntasFrecuentesGenerico"
  :preguntas="preguntas"                                 <!-- Array con preguntas -->
