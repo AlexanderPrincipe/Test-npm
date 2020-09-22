@@ -36,7 +36,7 @@ export default {
   },
   data () {
     return {
-      TextoTab: 'Utilización del seguro seguro seguro del seguro ',
+      TextoTab: 'Utilización del seguro seguro seguro seguro',
       imagenMenu: require("./static/media/icons/Group11Copy.svg"),
       regresarPrincipal: '/preguntas-frecuentes/',
       preguntas:[
@@ -112,7 +112,7 @@ export default {
         },
         {
           id: "6",
-          title: "Utilización del seguro",
+          title: "Utilización del seguro seguro seguro seguro seguro",
           to: '/preguntas-frecuentes/utilizacion-viaje-seguro'
         },
         {
@@ -296,7 +296,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  width: 640px;
+  width: 87%;
   text-align: left;
   padding-top: 0px;
 }
@@ -356,7 +356,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-    width: 585px;
+    width: 96%; 
     text-align: left;
     padding-top: 0px;
   }
@@ -406,7 +406,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-    width: 435px;
+    /* width: 435px; */
     text-align: left;
     padding-top: 0px;
   }
@@ -432,7 +432,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-    width: 525px;
+    /* width: 525px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -507,7 +507,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    width: 500px;
+    /* width: 500px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -536,7 +536,7 @@ a {
     font-size: 15px;
     font-weight: 400;
     line-height: 26px;
-    width: 460px;
+    /* width: 460px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -569,7 +569,7 @@ a {
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
-    width: 440px;
+    /* width: 440px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -605,7 +605,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 420px;
+    /* width: 420px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -641,7 +641,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 405px;
+    /* width: 405px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -677,7 +677,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 395px;
+    /* width: 395px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -720,7 +720,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 390px;
+    /* width: 390px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -763,7 +763,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 370px;
+    /* width: 370px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -799,7 +799,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 340px;
+    /* width: 340px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -839,7 +839,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    width: 320px;
+    /* width: 320px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -861,7 +861,7 @@ a {
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
-    width: 320px;
+    /* width: 320px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -888,7 +888,7 @@ a {
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
-    width: 310px;
+    /* width: 310px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;
@@ -943,7 +943,7 @@ a {
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
-    width: 300px;
+    /* width: 300px; */
     text-align: left;
     padding-top: 0px;
     padding-left: 20px;

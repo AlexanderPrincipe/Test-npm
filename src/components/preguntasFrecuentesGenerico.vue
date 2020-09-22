@@ -30,7 +30,7 @@
                         div.listapf.omnes-medium.when-closed.acomodarlista {{item.title}} 
                         img.when-opened.flechapf.tamanoflecha2(src="@/static/media/icons/arrow_up.png")
                         img.when-closed.flechapf.tamanoflecha2(src="@/static/media/icons/arrow_down.png")
-                    b-collapse.mt-2(:id="item.identificador" accordion="accordion")
+                    b-collapse(:id="item.identificador" accordion="accordion")
                         span(v-for="(subrespuesta, index) in item.respuesta")
                           span(v-html="subrespuesta")
                           
@@ -68,9 +68,11 @@ export default {
 
 <style scoped lang="scss">
 
-    .dropdown-item {
-      font-family: "Omnes Medium";
-    }
+      ::v-deep .dropdown-item {
+        word-wrap: break-word !important;
+        white-space: break-spaces !important; 
+        line-height: 20px;
+      }
 
     .titulo_dropdown {
       width: 100%; 
@@ -124,7 +126,7 @@ export default {
       line-height: 14px;
       text-align: center;
       padding:9px;
-      margin-left: 0px;
+      margin-left: 0px;     
     }
 
     .tamanoflecha2 {
@@ -226,7 +228,7 @@ export default {
     font-size: 1rem;
     font-weight: 400;
     line-height: 30px;
-    width: 640px;
+    width: 87%;
     text-align: left;
     padding-top: 0px;
   }
@@ -283,7 +285,7 @@ export default {
       font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
-      width: 585px;
+      width: 96%;
       text-align: left;
       padding-top: 0px;
     }
@@ -300,12 +302,13 @@ export default {
 
    @media screen and (max-width: 991px) {
 
+
     .parrafo {
       color: #6f6f6f;
       font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
-      width: 96%;
+      // width: 96%;
       text-align: left;
       padding-top: 0px;
     }
@@ -333,7 +336,7 @@ export default {
       font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
-      width: 435px;
+      // width: 435px;
       text-align: left;
       padding-top: 0px;
     }
@@ -362,7 +365,7 @@ export default {
       font-size: 1rem;
       font-weight: 400;
       line-height: 30px;
-      width: 525px;
+      // width: 525px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -443,7 +446,7 @@ export default {
       font-size: 1rem;
       font-weight: 400;
       line-height: 26px;
-      width: 500px;
+      // width: 500px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -472,7 +475,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 26px;
-      width: 460px;
+      // width: 460px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -492,7 +495,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 440px;
+      // width: 440px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -545,7 +548,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 420px;
+      // width: 420px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -580,7 +583,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 405px;
+      // width: 405px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -613,7 +616,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 395px;
+      // width: 395px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -646,7 +649,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 390px;
+      // width: 390px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -679,7 +682,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 370px;
+      // width: 370px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -725,7 +728,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 340px;
+      // width: 340px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -758,7 +761,7 @@ export default {
       font-size: 0.9rem;
       font-weight: 400;
       line-height: 24px;
-      width: 320px;
+      // width: 320px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -775,7 +778,7 @@ export default {
       font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
-      width: 320px;
+      // width: 320px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -790,7 +793,7 @@ export default {
       font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
-      width: 310px;
+      // width: 310px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
@@ -828,7 +831,7 @@ export default {
       font-size: 0.8rem;
       font-weight: 400;
       line-height: 24px;
-      width: 300px;
+      // width: 300px;
       text-align: left;
       padding-top: 0px;
       padding-left: 20px;
