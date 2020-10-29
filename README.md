@@ -161,7 +161,7 @@ src/static/media/icons
 npm run build-package
 ```
 
-### 2. Cambiar versión del paquete en pachake.json
+### 2. Cambiar versión del paquete en package.json
 
 ```
 "version": "0.7.3",
