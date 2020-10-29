@@ -174,8 +174,11 @@ npm run build-package
 npm publish
 ```
 
+### 4. Importar el css del paquete
 
-
+```
+@import "preguntas-frecuentes-viajes/dist/PreguntasFrecuentesGenerico.css";
+```
 
 ### Observaciones
 
