@@ -153,6 +153,32 @@ src/static/media/icons
 
 ![Captura de pantalla de 2020-07-03 20-23-41](https://user-images.githubusercontent.com/31213239/86502671-4f6e4b00-bd6b-11ea-9dac-7d7854d0c046.png)
 
+### Indicaciones para subir nueva versión
+
+### 1. Guardar un cambio en el paquete
+
+```
+npm run build-package
+```
+
+### 2. Cambiar versión del paquete en package.json
+
+```
+"version": "0.7.3",
+```
+
+
+### 3. Subir el paquete a npm
+
+```
+npm publish
+```
+
+### 4. Importar el css del paquete
+
+```
+@import "preguntas-frecuentes-viajes/dist/PreguntasFrecuentesGenerico.css";
+```
 
 ### Observaciones
 
