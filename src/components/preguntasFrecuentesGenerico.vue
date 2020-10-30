@@ -1,5 +1,5 @@
 <template lang="pug">
-    div
+    div 
         div.moverizquierda
           b-breadcrumb-item(:to="regresarPrincipal")
             img.w-1(src="@/static/media/icons/PathCopy3.png")
